@@ -1,5 +1,11 @@
-<ul class="pokemons">
+<div class="page">
+  <div class="page__search">
+    <input type="text" (input)="filterPokemons($event.target.value)" placeholder="Enter pokemon name..." autofocus/>
+  </div>
+
+  <ul class="pokemons">
     <li *ngFor="let pokemon of pokemons" class="pokemons__item">
-        <app-pokemon [pokemon]="pokemon"></app-pokemon>
+      <app-pokemon [pokemon]="pokemon"></app-pokemon>
     </li>
-</ul>
+  </ul>
+</div>
